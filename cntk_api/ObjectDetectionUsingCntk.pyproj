@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{e735f995-8c2c-4215-a1db-b8bbb37bab38}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>1_computeRois.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>{9a7a9026-48c1-4688-9d5d-e5699d47d074}</InterpreterId>
+    <InterpreterVersion>3.5</InterpreterVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="1_computeRois.py" />
+    <Compile Include="2_cntkGenerateInputs.py" />
+    <Compile Include="3_runCntk.py" />
+    <Compile Include="4_trainSvm.py" />
+    <Compile Include="5_evaluateResults.py" />
+    <Compile Include="5_visualizeResults.py" />
+    <Compile Include="6_scoreImage.py" />
+    <Compile Include="A1_annotateImages.py" />
+    <Compile Include="A2_annotateBboxLabels.py" />
+    <Compile Include="B1_evaluateRois.py" />
+    <Compile Include="B2_cntkVisualizeInputs.py" />
+    <Compile Include="deprecated_3_runCntk_brainscript.py" />
+    <Compile Include="fastRCNN\imdb.py" />
+    <Compile Include="fastRCNN\nms.py" />
+    <Compile Include="fastRCNN\pascal_voc.py" />
+    <Compile Include="fastRCNN\test.py" />
+    <Compile Include="fastRCNN\timer.py" />
+    <Compile Include="fastRCNN\train_svms.py" />
+    <Compile Include="fastRCNN\voc_eval.py" />
+    <Compile Include="fastRCNN\__init__.py" />
+    <Compile Include="helpers.py" />
+    <Compile Include="helpers_cntk.py" />
+    <Compile Include="imdb_data.py" />
+    <Compile Include="PARAMETERS.py" />
+    <Compile Include="__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\grocery\negative\1.jpg" />
+    <Content Include="data\grocery\negative\2.jpg" />
+    <Content Include="data\grocery\negative\3.jpg" />
+    <Content Include="data\grocery\negative\4.jpg" />
+    <Content Include="data\grocery\negative\5.jpg" />
+    <Content Include="data\grocery\positive\WIN_20160803_11_29_07_Pro.jpg" />
+    <Content Include="data\grocery\positive\WIN_20160803_11_30_07_Pro.jpg" />
+    <Content Include="data\grocery\positive\WIN_20160803_11_30_57_Pro.jpg" />
+    <Content Include="data\grocery\positive\WIN_20160803_11_31_30_Pro.jpg" />
+    <Content Include="data\grocery\positive\WIN_20160803_11_42_36_Pro.jpg" />
+    <Content Include="data\grocery\positive\WIN_20160803_11_43_21_Pro.jpg" />
+    <Content Include="data\grocery\positive\WIN_20160803_11_43_40_Pro.jpg" />
+    <Content Include="data\grocery\positive\WIN_20160803_11_44_39_Pro.jpg" />
+    <Content Include="data\grocery\positive\WIN_20160803_11_45_08_Pro.jpg" />
+    <Content Include="data\grocery\positive\WIN_20160803_11_45_41_Pro.jpg" />
+    <Content Include="data\grocery\positive\WIN_20160803_11_48_10_Pro.jpg" />
+    <Content Include="data\grocery\positive\WIN_20160803_11_48_51_Pro.jpg" />
+    <Content Include="data\grocery\positive\WIN_20160803_11_49_02_Pro.jpg" />
+    <Content Include="data\grocery\positive\WIN_20160803_11_49_17_Pro.jpg" />
+    <Content Include="data\grocery\positive\WIN_20160803_12_36_37_Pro.jpg" />
+    <Content Include="data\grocery\positive\WIN_20160803_12_37_19_Pro.jpg" />
+    <Content Include="data\grocery\positive\WIN_20160803_12_37_40_Pro.jpg" />
+    <Content Include="data\grocery\positive\WIN_20160803_12_37_57_Pro.jpg" />
+    <Content Include="data\grocery\positive\WIN_20160803_12_38_18_Pro.jpg" />
+    <Content Include="data\grocery\positive\WIN_20160803_12_38_42_Pro.jpg" />
+    <Content Include="data\grocery\testImages\WIN_20160803_11_28_42_Pro.jpg" />
+    <Content Include="data\grocery\testImages\WIN_20160803_11_42_36_Pro.jpg" />
+    <Content Include="data\grocery\testImages\WIN_20160803_11_46_03_Pro.jpg" />
+    <Content Include="data\grocery\testImages\WIN_20160803_11_48_26_Pro.jpg" />
+    <Content Include="data\grocery\testImages\WIN_20160803_12_37_07_Pro.jpg" />
+    <Content Include="doc\nn_0WIN_20160803_11_28_42_Pro.jpg" />
+    <Content Include="doc\nn_1WIN_20160803_11_42_36_Pro.jpg" />
+    <Content Include="doc\nn_2WIN_20160803_11_46_03_Pro.jpg" />
+    <Content Include="doc\nn_3WIN_20160803_11_48_26_Pro.jpg" />
+    <Content Include="doc\nn_4WIN_20160803_12_37_07_Pro.jpg" />
+    <Content Include="doc\nn_noNms4WIN_20160803_12_37_07_Pro.jpg" />
+    <Content Include="doc\precision_recall.jpg" />
+    <Content Include="doc\rcnnPipeline.JPG" />
+    <Content Include="doc\svm_0WIN_20160803_11_28_42_Pro.jpg" />
+    <Content Include="doc\svm_1WIN_20160803_11_42_36_Pro.jpg" />
+    <Content Include="doc\svm_2WIN_20160803_11_46_03_Pro.jpg" />
+    <Content Include="doc\svm_3WIN_20160803_11_48_26_Pro.jpg" />
+    <Content Include="doc\svm_4WIN_20160803_12_37_07_Pro.jpg" />
+    <Content Include="doc\WIN_20160803_11_29_07_Pro.annotateBboxes.jpg" />
+    <Content Include="doc\WIN_20160803_11_29_07_Pro.annotateLabels.jpg" />
+    <Content Include="doc\WIN_20160803_11_29_07_Pro.cntk.jpg" />
+    <Content Include="doc\WIN_20160803_11_29_07_Pro.cntkNoOverlap.jpg" />
+    <Content Include="doc\WIN_20160803_11_29_07_Pro.noGrid.roi.jpg" />
+    <Content Include="doc\WIN_20160803_11_29_07_Pro.noGridNoFiltering.roi.jpg" />
+    <Content Include="doc\WIN_20160803_11_29_07_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\negative\1.roi.jpg" />
+    <Content Include="proc\grocery\rois\negative\1.roi.txt" />
+    <Content Include="proc\grocery\rois\negative\2.roi.jpg" />
+    <Content Include="proc\grocery\rois\negative\2.roi.txt" />
+    <Content Include="proc\grocery\rois\negative\3.roi.jpg" />
+    <Content Include="proc\grocery\rois\negative\3.roi.txt" />
+    <Content Include="proc\grocery\rois\negative\4.roi.jpg" />
+    <Content Include="proc\grocery\rois\negative\4.roi.txt" />
+    <Content Include="proc\grocery\rois\negative\5.roi.jpg" />
+    <Content Include="proc\grocery\rois\negative\5.roi.txt" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_29_07_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_29_07_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_30_07_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_30_07_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_30_57_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_30_57_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_31_30_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_31_30_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_42_36_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_42_36_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_43_21_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_43_21_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_43_40_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_43_40_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_44_39_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_44_39_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_45_08_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_45_08_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_45_41_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_45_41_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_48_10_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_48_10_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_48_51_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_48_51_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_49_02_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_49_02_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_49_17_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_11_49_17_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_12_36_37_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_12_36_37_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_12_37_19_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_12_37_19_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_12_37_40_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_12_37_40_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_12_37_57_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_12_37_57_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_12_38_18_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_12_38_18_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_12_38_42_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\positive\WIN_20160803_12_38_42_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\testImages\WIN_20160803_11_28_42_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\testImages\WIN_20160803_11_28_42_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\testImages\WIN_20160803_11_42_36_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\testImages\WIN_20160803_11_42_36_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\testImages\WIN_20160803_11_46_03_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\testImages\WIN_20160803_11_46_03_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\testImages\WIN_20160803_11_48_26_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\testImages\WIN_20160803_11_48_26_Pro.roi.txt" />
+    <Content Include="proc\grocery\rois\testImages\WIN_20160803_12_37_07_Pro.roi.jpg" />
+    <Content Include="proc\grocery\rois\testImages\WIN_20160803_12_37_07_Pro.roi.txt" />
+    <Content Include="resources\python34_64bit_requirements\requirements.txt" />
+    <Content Include="resources\python35_64bit_requirements\requirements.txt" />
+    <Content Include="results\grocery\visualizations\svm_0WIN_20160803_11_28_42_Pro.jpg" />
+    <Content Include="results\grocery\visualizations\svm_1WIN_20160803_11_42_36_Pro.jpg" />
+    <Content Include="results\grocery\visualizations\svm_2WIN_20160803_11_46_03_Pro.jpg" />
+    <Content Include="results\grocery\visualizations\svm_3WIN_20160803_11_48_26_Pro.jpg" />
+    <Content Include="results\grocery\visualizations\svm_4WIN_20160803_12_37_07_Pro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
+    <Folder Include="data\grocery\" />
+    <Folder Include="data\grocery\negative" />
+    <Folder Include="data\grocery\positive" />
+    <Folder Include="data\grocery\testImages" />
+    <Folder Include="doc" />
+    <Folder Include="fastRCNN" />
+    <Folder Include="proc\" />
+    <Folder Include="proc\grocery\" />
+    <Folder Include="proc\grocery\rois\" />
+    <Folder Include="proc\grocery\rois\negative" />
+    <Folder Include="proc\grocery\rois\positive" />
+    <Folder Include="proc\grocery\rois\testImages" />
+    <Folder Include="resources\" />
+    <Folder Include="resources\python34_64bit_requirements" />
+    <Folder Include="resources\python35_64bit_requirements" />
+    <Folder Include="results\" />
+    <Folder Include="results\grocery\" />
+    <Folder Include="results\grocery\visualizations" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="{9a7a9026-48c1-4688-9d5d-e5699d47d074}\3.5" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>

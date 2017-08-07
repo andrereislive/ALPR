@@ -1,0 +1,1 @@
+{"clean_image": null, "recognized_objects": [{"score": "6.87916", "bottom": "1140", "right": "654", "nms": "False", "top": "648", "left": "473", "label": "azeite andorinha"}, {"score": "5.2365", "bottom": "822", "right": "972", "nms": "False", "top": "609", "left": "855", "label": "azeite andorinha"}], "processed_image": ""}
