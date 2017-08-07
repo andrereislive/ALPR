@@ -96,14 +96,19 @@ def recursiveCallImage(strImageIndex):
     print("Time non-maxima surpression [ms]: " + str((datetime.datetime.now() - tstart).total_seconds() * 1000))
 
     # visualize results
-    imgDebug = visualizeResults(imgPath, labels, scores, currRois, classes, nmsKeepIndices,
+    boPrintLabel = True;
+    boPrintScore = True;
+    decisionThreshold = 0.0;
+    imgDebug = visualizeResults(imgPath, labels, scores, currRois, classes,  boPrintLabel, boPrintScore, nmsKeepIndices,
                                 boDrawNegativeRois=False, boDrawNmsRejectedRois=False)
+
+                                
     imshow(imgDebug, waitDuration=1, maxDim=800)
     imwrite(imgDebug, outDir +imageNameRecognizedPrefix +os.path.basename(imgPath))
 
 ### Out Of the Functio
 
-for x in range(1,22):
+for x in range(1,7):
         recursiveCallImage(str(x))
 
 print("FIM DO PROCESSAMENTO")

@@ -26,7 +26,7 @@ print("MY ROOT DIR = "+rootDir)
 ############################
 # default parameters
 ############################
-datasetName = "AzeiteGalloDS"
+datasetName = "PlateDS"
 
 #directories
 imgDir = rootDir + "/data/" + datasetName + "/"
@@ -188,6 +188,21 @@ elif datasetName.startswith("CocaColaDS"):
 elif datasetName.startswith("AzeiteGalloDS"):
     classes = ('__background__',  # always have '__background__' be at index 0
                "Azeite Gallo")
+elif datasetName.startswith("PlateDS"):
+    classes = ('__background__',  # always have '__background__' be at index 0
+               "-",
+              #"0",
+              #"1",
+               "2",
+               #"3",
+               #"4",
+               #"5",
+               #"6",
+               "7",
+               "8",
+               "9"
+               )
+
 
     # roi generation
     cntk_nrRois = azeite_nRois   #this number is too low to get good accuracy but allows for fast training and scoring (for demo purposes)

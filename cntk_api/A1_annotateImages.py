@@ -6,7 +6,7 @@ locals().update(importlib.import_module("PARAMETERS").__dict__)
 ####################################
 # Parameters
 ####################################
-imagesToAnnotateDir = "D:/Documentos/1500fh/Case Supermarket/Machine Learning - Trainning/Fase de Testes/Amostras/Testes/embalagemDif/Teste1/clean/testImages/"
+imagesToAnnotateDir = "D:/Django-Workspace/ALPR/ALPR/cntk_api/data/PlateDS/positive/"
 
 #no need to change these params
 drawingMaxImgSize = 1000.0
