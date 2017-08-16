@@ -47,7 +47,7 @@ imageNameRecognizedPrefix = "Recognized_image_" # prefixo do nome de uma imagem 
 
 # Andre - Custom parameters
 
-azeite_nRois = 1000  # provavelmente o limite é o valor da hipotenuza do tamanho maximo de uma imagem de treino Ex 1456 x 2592 = nrois= 2950
+plate_nRois = 1000  # provavelmente o limite é o valor da hipotenuza do tamanho maximo de uma imagem de treino Ex 1456 x 2592 = nrois= 2950
 ctm_ss_nmsThreshold = 0.9   # default eh 0.85
 ctm_nmsThreshold = 0.1  # the lower the more ROI will be combined 
 ctm_ss_max_merging_iterations = 20
@@ -193,7 +193,7 @@ elif datasetName.startswith("PlateDS"):
 
 
     # roi generation
-    cntk_nrRois = azeite_nRois   #this number is too low to get good accuracy but allows for fast training and scoring (for demo purposes)
+    cntk_nrRois = plate_nRois   #this number is too low to get good accuracy but allows for fast training and scoring (for demo purposes)
     roi_minDimRel = 0.04
     roi_maxDimRel = 0.4
     roi_minNrPixelsRel = 2    * roi_minDimRel * roi_minDimRel

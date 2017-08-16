@@ -16,18 +16,18 @@ def index(request):
  
 ####################### Check if server is online
 def online(request):
-    return HttpResponse('<h1>SERVER IS ONLINE</h1>',status=200)
+    return HttpResponse('<h1>ALPR Automatic Licence Plate Recognition - SERVER IS ONLINE</h1>',status=200)
 
 ###################################################
 # INICIO Funcoes - Projeto Intelligent Promoter
 @csrf_exempt
-def supermercado(request):
+def plateRecognition(request):
 
     if request.method == 'POST':
       
-## algoritmo OK INICIO #### Descomentar depois que terminar
+       ## algoritmo OK INICIO #### Descomentar depois que terminar
        data = JSONParser().parse(request)
-       imageUUidName = data["clean_image_uuid_name"]
+       imageUUidName = data["clean_image_guid_name"]
        # Salva a img no diretorio 
        receiveImageJpgBytes(data["clean_image"], recognizeDir+imageUUidName+".jpg")
        # faz o processo de reconhecimento
