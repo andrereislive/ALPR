@@ -47,8 +47,7 @@ imageNameRecognizedPrefix = "Recognized_image_" # prefixo do nome de uma imagem 
 
 # Andre - Custom parameters
 
-
-azeite_nRois = 3000  # provavelmente o limite é o valor da hipotenuza do tamanho maximo de uma imagem de treino Ex 1456 x 2592 = nrois= 2950
+azeite_nRois = 1000  # provavelmente o limite é o valor da hipotenuza do tamanho maximo de uma imagem de treino Ex 1456 x 2592 = nrois= 2950
 ctm_ss_nmsThreshold = 0.9   # default eh 0.85
 ctm_nmsThreshold = 0.1  # the lower the more ROI will be combined 
 ctm_ss_max_merging_iterations = 20
@@ -190,18 +189,7 @@ elif datasetName.startswith("AzeiteGalloDS"):
                "Azeite Gallo")
 elif datasetName.startswith("PlateDS"):
     classes = ('__background__',  # always have '__background__' be at index 0
-               "-",
-              #"0",
-              #"1",
-               "2",
-               #"3",
-               #"4",
-               #"5",
-               #"6",
-               "7",
-               "8",
-               "9"
-               )
+               "placa")
 
 
     # roi generation
