@@ -1,5 +1,5 @@
 import sys
-sys.path.append("D:/Django-Workspace/RestServer/cntk_api")
+sys.path.append("C:\Web Services\Web Service - ALPR\ALPR\cntk_api")
 
 from django.conf.urls import url
 from app import views
