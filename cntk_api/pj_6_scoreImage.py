@@ -117,7 +117,7 @@ def generateJson(boPrintLabel, boPrintScore,imageUUidName="1"): # passar o nome 
 
    
 
-    myJson = { "processed_image": processed_img, "clean_image":None, "recognized_objects" : recognized_objects_array }
+    myJson = { "processed_image": None, "clean_image":None, "recognized_objects" : recognized_objects_array }
 
     writeStringToFile(outDir+imageUUidName+".json",json.dumps(myJson))
     return myJson
